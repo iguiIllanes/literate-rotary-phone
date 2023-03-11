@@ -1,6 +1,17 @@
 .input-zone {
   margin-top: 20px;
   padding: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 30%;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
 }
 
 table {

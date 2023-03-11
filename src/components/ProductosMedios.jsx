@@ -25,25 +25,25 @@ const ProductosMedios = () => {
   };
 
   return (
-    <>
-      <div className="input-zone">
-        <label htmlFor="seed">Semilla 1:</label>
-        <input id="seed" type="text" value={seed} onChange={handleSeed} />
+    <div className="input-zone">
+      <label htmlFor="seed">Semilla 1:</label>
+      <input id="seed" type="text" value={seed} onChange={handleSeed} />
+      <br />
+      <label htmlFor="seed2">Semilla 2:</label>
+      <input id="seed2" type="text" value={seed2} onChange={handleSeed2} />
 
-        <label htmlFor="seed2">Semilla 2:</label>
-        <input id="seed2" type="text" value={seed2} onChange={handleSeed2} />
+      <br />
+      <label htmlFor="quantity">Cantidad:</label>
+      <input
+        id="quantity"
+        type="text"
+        value={quantity}
+        onChange={handleQuantity}
+      />
 
-        <label htmlFor="quantity">Cantidad:</label>
-        <input
-          id="quantity"
-          type="text"
-          value={quantity}
-          onChange={handleQuantity}
-        />
-
-        <button onClick={generate}>Generar</button>
-      </div>
-    </>
+      <br />
+      <button onClick={generate}>Generar</button>
+    </div>
   );
 };
 

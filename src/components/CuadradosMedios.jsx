@@ -22,7 +22,7 @@ const CuadradosMedios = () => {
       <div className="input-zone">
         <label htmlFor="seed">Semilla:</label>
         <input id="seed" type="text" value={seed} onChange={handleSeed} />
-
+        <br />
         <label htmlFor="quantity">Cantidad</label>
         <input
           id="quantity"
@@ -31,6 +31,7 @@ const CuadradosMedios = () => {
           onChange={handleQuantity}
         />
 
+        <br />
         <button onClick={generate}>Generar</button>
       </div>
     </>

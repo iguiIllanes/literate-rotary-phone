@@ -1,6 +1,8 @@
 import useStore from "./../store/Store";
 
 import CuadradosMedios from "./CuadradosMedios";
+import Lineal from "./Lineal";
+import Multiplicativo from "./Multiplicativo";
 import ProductosMedios from "./ProductosMedios";
 import RandomNumberTable from "./RandomNumberTable";
 
@@ -31,9 +33,9 @@ const RandomNumberGenerator = () => {
       ) : method === "productos medios" ? (
         <ProductosMedios />
       ) : method === "lineal" ? (
-        <></>
+        <Lineal />
       ) : method === "multiplicativo" ? (
-        <></>
+        <Multiplicativo />
       ) : (
         <></>
       )}

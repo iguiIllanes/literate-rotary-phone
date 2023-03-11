@@ -3,6 +3,7 @@ import useStore from "./../store/Store";
 const RandomNumberTable = () => {
   const method = useStore((state) => state.selectedMethod);
   const table = useStore((state) => state.table);
+  const cabecera = useStore((state) => state.cabecera);
 
   // Check if the table exists before transposing it
   const transposedTable =
@@ -17,8 +18,8 @@ const RandomNumberTable = () => {
         <thead>
           <tr>
             {transposedTable.length > 0 ? <td>i</td> : null}
-            {transposedTable.length > 0 &&
-              transposedTable[0].map((_, i) => <th key={i}>Numero {i + 1}</th>)}
+            {cabecera.length > 0 &&
+              cabecera.map((item, index) => <th key={index}>{item}</th>)}
           </tr>
         </thead>
         <tbody>
@@ -33,11 +34,6 @@ const RandomNumberTable = () => {
                     key={j + 1}
                     style={{
                       border: "1px solid black",
-                      backgroundColor:
-                        row.filter((c, index) => c === cell && index !== j)
-                          .length > 0
-                          ? "red"
-                          : "white",
                     }}
                   >
                     {cell}
