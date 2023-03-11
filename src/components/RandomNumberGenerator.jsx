@@ -1,6 +1,8 @@
 import useStore from "./../store/Store";
 
 import CuadradosMedios from "./CuadradosMedios";
+import ProductosMedios from "./ProductosMedios";
+import RandomNumberTable from "./RandomNumberTable";
 
 const RandomNumberGenerator = () => {
   const method = useStore((state) => state.selectedMethod);
@@ -27,7 +29,7 @@ const RandomNumberGenerator = () => {
       {method === "cuadrados medios" ? (
         <CuadradosMedios />
       ) : method === "productos medios" ? (
-        <></>
+        <ProductosMedios />
       ) : method === "lineal" ? (
         <></>
       ) : method === "multiplicativo" ? (
@@ -35,6 +37,8 @@ const RandomNumberGenerator = () => {
       ) : (
         <></>
       )}
+
+      <RandomNumberTable />
     </>
   );
 };
