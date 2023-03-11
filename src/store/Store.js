@@ -37,8 +37,10 @@ const productosMedios = (seed1, seed2, quantity) => {
   for (let i = 0; i < quantity; i++) {
     seed1 = parseInt(seed1);
     seed2 = parseInt(seed2);
+    console.log("usando semillas", seed1, seed2);
     seed1 = seed1 * seed2;
-    y = y.concat(seed1);
+    console.log("producto", seed1);
+    y = y.concat(seed1); // store in y_i column
 
     let seed1LengthDifference = String(seed1).length - originalSeed1Length;
     if (seed1LengthDifference % 2 !== 0) {
@@ -52,9 +54,12 @@ const productosMedios = (seed1, seed2, quantity) => {
     seed1 = parseInt(seed1);
     x = x.concat(seed1);
     r = r.concat(seed1 / Math.pow(10, originalSeed1Length));
+    const aux = seed1;
+    seed1 = seed2;
+    seed2 = aux;
   }
 
-  return { table: [x, y, r] };
+  return { table: [y, x, r] };
 };
 
 const useStore = create((set) => ({
