@@ -1,5 +1,8 @@
 import { create } from "zustand";
 
+const toFindDuplicates = (arry) =>
+  arry.filter((item, index) => arry.indexOf(item) !== index);
+
 const cuadradosMedios = (seed, quantity) => {
   let cabecera = ["Yi", "Xi", "Ri"];
   let y = [];
@@ -23,6 +26,16 @@ const cuadradosMedios = (seed, quantity) => {
     seed = parseInt(seed);
     x = x.concat(seed);
     r = r.concat(seed / Math.pow(10, originalSeedLength));
+  }
+
+  const duplicateElements = toFindDuplicates(r);
+  if (duplicateElements.length > 0) {
+    const indexOfFirst = r.indexOf(duplicateElements[0]);
+    alert(
+      `La serie se degenera la ${
+        r.indexOf(duplicateElements[0], indexOfFirst + 1) + 1
+      } iteracion`
+    );
   }
 
   return { table: [y, x, r], cabecera: cabecera };
@@ -57,7 +70,15 @@ const productosMedios = (seed1, seed2, quantity) => {
     seed1 = seed2;
     seed2 = aux;
   }
-
+  const duplicateElements = toFindDuplicates(r);
+  if (duplicateElements.length > 0) {
+    const indexOfFirst = r.indexOf(duplicateElements[0]);
+    alert(
+      `La serie se degenera la ${
+        r.indexOf(duplicateElements[0], indexOfFirst + 1) + 1
+      } iteracion`
+    );
+  }
   return { table: [y, x, r], cabecera: cabecera };
 };
 
@@ -76,8 +97,17 @@ const lineal = (seed, a, c, m) => {
     y = y.concat(`((${a}*${xi}) + ${c}) % ${m}`);
     xi = (a * xi + c) % m;
     x = x.concat(xi);
-    let ri = xi / m;
+    let ri = xi / (m - 1);
     r = r.concat(ri);
+  }
+  const duplicateElements = toFindDuplicates(r);
+  if (duplicateElements.length > 0) {
+    const indexOfFirst = r.indexOf(duplicateElements[0]);
+    alert(
+      `La serie se degenera la ${
+        r.indexOf(duplicateElements[0], indexOfFirst + 1) + 1
+      } iteracion`
+    );
   }
   return { table: [y, x, r], cabecera: cabecera };
 };
@@ -97,8 +127,17 @@ const multiplicativo = (seed, a, m) => {
     y = y.concat(`(${a}*${xi}) % ${m}`);
     xi = (a * xi) % m;
     x = x.concat(xi);
-    let ri = xi / m;
+    let ri = xi / (m - 1);
     r = r.concat(ri);
+  }
+  const duplicateElements = toFindDuplicates(r);
+  if (duplicateElements.length > 0) {
+    const indexOfFirst = r.indexOf(duplicateElements[0]);
+    alert(
+      `La serie se degenera la ${
+        r.indexOf(duplicateElements[0], indexOfFirst + 1) + 1
+      } iteracion`
+    );
   }
   return { table: [y, x, r], cabecera: cabecera };
 };
