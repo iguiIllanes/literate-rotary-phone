@@ -5,7 +5,7 @@ import "./styles/styles.css";
 const App = () => {
   return (
     <div>
-      <h1>Generacion de numeros aleatorios</h1>
+      <h1>Generacion de numeros pseudoaleatorios</h1>
       <h3>
         Creado por Ignacio Illanes Bequer para la materia de Modelado, Dinamica
         y Simulacion de Sistemas
