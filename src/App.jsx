@@ -10,7 +10,7 @@ const App = () => {
         Creado por Ignacio Illanes Bequer para la materia de Modelado, Dinamica
         y Simulacion de Sistemas
       </h3>
-      <h4>Universidad Católica Boliviana "San Pablo" - Semestre I - 2023</h4>
+      <h4>Universidad Católica Boliviana "San Pablo" - Semestre II - 2023</h4>
       <RandomNumberGenerator />
     </div>
   );
