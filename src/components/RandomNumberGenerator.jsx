@@ -1,5 +1,4 @@
 import useStore from "./../store/Store";
-
 import CuadradosMedios from "./CuadradosMedios";
 import Lineal from "./Lineal";
 import Multiplicativo from "./Multiplicativo";
@@ -12,12 +11,15 @@ const RandomNumberGenerator = () => {
 
   return (
     <>
-      <label htmlFor="method">Escoge un metodo: </label>
+      <label htmlFor="method" className="block text-gray-700 dark:text-white">
+        Escoge un método:
+      </label>
       <select
         name="method"
         id="method"
         value={method}
         onChange={(event) => setMethod(event.target.value)}
+        className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 mt-1 block w-full focus:ring focus:ring-blue-500 focus:border-blue-500"
       >
         <option value="cuadrados medios">
           No Congruencial - Cuadrados Medios

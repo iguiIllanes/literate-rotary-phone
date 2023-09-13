@@ -3,13 +3,10 @@ import useStore from "../store/Store";
 const Multiplicativo = () => {
   const seed = useStore((state) => state.seed);
   const setSeed = useStore((state) => state.setSeed);
-
   const a = useStore((state) => state.a);
   const setA = useStore((state) => state.setA);
-
   const m = useStore((state) => state.m);
   const setM = useStore((state) => state.setM);
-
   const generate = useStore((state) => state.generate);
 
   const handleSeed = (e) => {
@@ -25,20 +22,43 @@ const Multiplicativo = () => {
   };
 
   return (
-    <div className="input-zone">
-      <label htmlFor="seed">Semilla:</label>
-      <input id="seed" type="text" value={seed} onChange={handleSeed} />
+    <div className="input-zone p-4 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg mt-4">
+      <label htmlFor="seed" className="block text-gray-700 dark:text-white">
+        Semilla:
+      </label>
+      <input
+        id="seed"
+        type="text"
+        value={seed}
+        onChange={handleSeed}
+        className="border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 w-full focus:ring focus:ring-blue-500 focus:border-blue-500 mt-1"
+      />
 
-      <br />
-      <label htmlFor="a">a:</label>
-      <input id="a" type="text" value={a} onChange={handleA} />
+      <label htmlFor="a" className="block text-gray-700 dark:text-white mt-2">
+        a:
+      </label>
+      <input
+        id="a"
+        type="text"
+        value={a}
+        onChange={handleA}
+        className="border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 w-full focus:ring focus:ring-blue-500 focus:border-blue-500 mt-1"
+      />
 
-      <br />
-      <label htmlFor="m">m:</label>
-      <input id="m" type="text" value={m} onChange={handleM} />
+      <label htmlFor="m" className="block text-gray-700 dark:text-white mt-2">
+        m:
+      </label>
+      <input
+        id="m"
+        type="text"
+        value={m}
+        onChange={handleM}
+        className="border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 w-full focus:ring focus:ring-blue-500 focus:border-blue-500 mt-1"
+      />
 
-      <br />
-      <button onClick={generate}>Generar</button>
+      <button onClick={generate} className="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-600 focus:ring focus:ring-blue-500 focus:border-blue-500">
+        Generar
+      </button>
     </div>
   );
 };
