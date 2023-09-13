@@ -28,7 +28,10 @@ const CuadradosMedios = () => {
         className="border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 w-full focus:ring focus:ring-blue-500 focus:border-blue-500 mt-1"
       />
 
-      <label htmlFor="quantity" className="block text-gray-700 dark:text-white mt-2">
+      <label
+        htmlFor="quantity"
+        className="block text-gray-700 dark:text-white mt-2"
+      >
         Cantidad:
       </label>
       <input
@@ -39,7 +42,10 @@ const CuadradosMedios = () => {
         className="border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 w-full focus:ring focus:ring-blue-500 focus:border-blue-500 mt-1"
       />
 
-      <button onClick={generate} className="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-600 focus:ring focus:ring-blue-500 focus:border-blue-500">
+      <button
+        onClick={generate}
+        className="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-600 focus:ring focus:ring-blue-500 focus:border-blue-500"
+      >
         Generar
       </button>
     </div>

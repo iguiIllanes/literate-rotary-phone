@@ -2,38 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .input-zone { */
-/*   margin-top: 20px; */
-/*   padding: 10px; */
-/*   margin-bottom: 20px; */
-/* } */
-/**/
-/* input { */
-/*   width: 30%; */
-/*   height: 25px; */
-/*   border: 1px solid #ccc; */
-/*   border-radius: 5px; */
-/*   padding: 10px; */
-/*   font-size: 16px; */
-/*   margin: 10px; */
-/* } */
-/**/
-/* table { */
-/*   border-collapse: collapse; */
-/*   width: 100%; */
-/*   max-width: 800px; */
-/*   margin: 0 auto; */
-/*   font-size: 14px; */
-/*   line-height: 1.5; */
-/* } */
-/**/
-/* thead { */
-/*   background-color: #f5f5f5; */
-/*   font-weight: bold; */
-/* } */
-/**/
-/* thead th:first-child, */
-/* tbody td:first-child { */
-/*   background-color: #e6f1f6; */
-/*   color: #444; */
-/* } */
+input {
+  color: black;
+}
